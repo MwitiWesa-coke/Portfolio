@@ -203,3 +203,13 @@
 .certificate-gallery img:hover {
     transform: scale(1.05);
 }
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}

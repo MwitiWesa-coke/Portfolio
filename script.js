@@ -1,7 +1,8 @@
 function showCertificates() {
-    document.getElementById('certificates-section').style.display = 'block';
+    const section = document.getElementById('certificates-section');
+    section.style.display = 'block';
+    section.classList.add('fade-in');
 }
-
 function showResume() {
     window.open('Wesa_Mwiti_Resume.pdf', '_blank');
 }
