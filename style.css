@@ -152,7 +152,24 @@
     line-height: 1.5;
 }
 
-/* CERTIFICATES GALLERY */
+
+/* Certificates hidden by default */
+.certificates {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.8s ease;
+    margin-top: 0;
+}
+
+/* When .show is added */
+.certificates.show {
+    opacity: 1;
+    max-height: 1000px; /* large enough to show all images */
+    margin-top: 30px;
+}
+
+/* Gallery styles */
 .certificate-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -160,24 +177,14 @@
     gap: 1rem;
     margin-top: 1rem;
 }
+
 .certificate-gallery img {
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     transition: transform 0.3s ease;
 }
+
 .certificate-gallery img:hover {
     transform: scale(1.05);
-}
-
-/* SMOOTH FADE & SLIDE FOR CERTIFICATES SECTION */
-#certificates-section {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: opacity 1s ease, max-height 1s ease;
-}
-#certificates-section.show {
-    opacity: 1;
-    max-height: 1000px;
 }
