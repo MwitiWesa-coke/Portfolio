@@ -7,7 +7,7 @@ function showResume() {
 }
 
 function showContact() {
-    alert('Contact me at mwitiwesa4@gmail.com');
+    alert('Contact me at:\nPhone: +254707712193\nEmail: mwitiwesa4@gmail.com');
 }
 
 // Typing animation for Tagline
