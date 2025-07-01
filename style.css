@@ -37,7 +37,7 @@
     font-family: Arial, sans-serif;
 }
 
-/* HEADER FLEX LAYOUT */
+/* HEADER & PROFILE */
 .header .name-photo-section {
     display: flex;
     justify-content: space-between;
@@ -71,18 +71,13 @@
     display: inline-block;
 }
 
-/* SOCIAL LINKS UNDER PHOTO */
-.photo-section .social-links {
-    margin-top: 10px;
-}
-
+/* SOCIAL LINKS */
 .social-links a {
     color: white;
     margin: 0 10px;
     font-size: 24px;
     text-decoration: none;
 }
-
 .social-links a:hover {
     color: #00acee;
 }
@@ -99,7 +94,6 @@
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
 .buttons button:hover {
     background-color: rgba(255, 255, 255, 0.4);
 }
@@ -112,27 +106,22 @@
     border-radius: 10px;
 }
 
+/* SKILLS GRID */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 10px;
     margin-top: 15px;
 }
-
 .skill-card {
     background-color: rgba(255,255,255,0.2);
     padding: 10px;
     border-radius: 5px;
-    color: white;
-    font-weight: bold;
     text-align: center;
 }
 
-.projects {
-    margin-top: 30px;
-}
-
-.project-card {
+/* PROJECTS & BLOGS */
+.project-card, .blog-card {
     background: rgba(255, 255, 255, 0.1);
     margin: 10px auto;
     padding: 15px;
@@ -142,49 +131,28 @@
     font-weight: bold;
     text-align: left;
 }
-
-.project-card a {
+.project-card a, .blog-card a {
     color: #00acee;
     text-decoration: none;
 }
-
-.project-card a:hover {
+.project-card a:hover, .blog-card a:hover {
     text-decoration: underline;
 }
 
-/* BLOG CARDS */
-.blogs {
-    margin-top: 30px;
-}
-
-.blog-card {
-    background: rgba(255, 255, 255, 0.1);
-    margin: 10px auto;
-    padding: 15px;
-    border-radius: 10px;
-    width: 80%;
-}
-
-.blog-card a {
-    color: #00acee;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.blog-card a:hover {
-    text-decoration: underline;
-}
+/* ABOUT ME TYPING */
 #about-me-text {
     border-right: .15em solid white;
-    white-space: normal; /* ALLOW line breaks */
-    overflow-wrap: break-word; /* in case of long words */
+    white-space: normal;
+    overflow-wrap: break-word;
     display: block;
     text-align: left;
-    max-width: 90%; /* make it look nice inside box */
+    max-width: 90%;
     margin: 0 auto;
     font-size: 16px;
     line-height: 1.5;
 }
+
+/* CERTIFICATES GALLERY */
 .certificate-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -192,22 +160,24 @@
     gap: 1rem;
     margin-top: 1rem;
 }
-
 .certificate-gallery img {
     max-width: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     transition: transform 0.3s ease;
 }
-
 .certificate-gallery img:hover {
     transform: scale(1.05);
 }
-.fade-in {
-    animation: fadeIn 1s forwards;
-}
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* SMOOTH FADE & SLIDE FOR CERTIFICATES SECTION */
+#certificates-section {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease, max-height 1s ease;
+}
+#certificates-section.show {
+    opacity: 1;
+    max-height: 1000px;
 }
