@@ -1,7 +1,10 @@
 function showCertificates() {
     const section = document.getElementById('certificates-section');
     section.style.display = 'block';
-    section.classList.add('fade-in');
+    section.style.opacity = 0;           // ensure starts invisible
+    setTimeout(() => {
+        section.classList.add('fade-in'); // trigger fade
+    }, 10);  // tiny delay so browser registers the opacity 0 first
 }
 function showResume() {
     window.open('Wesa_Mwiti_Resume.pdf', '_blank');
