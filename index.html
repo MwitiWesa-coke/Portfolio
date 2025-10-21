@@ -1,111 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wesa Mwiti - Portfolio</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-</head>
-<body>
-    <video autoplay muted loop id="bg-video">
-        <source src="background.mp4" type="video/mp4">
-    </video>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
     <div id="shooting-star"></div>
 
     <div class="content">
-
-        <!-- HEADER SECTION -->
-        <div class="header">
-            <div class="name-photo-section">
-                <div class="name-section">
-                    <h1>Wesa Mwiti</h1>
-                    <p id="tagline"><span id="tagline-text"></span></p>
-                </div>
-                <div class="photo-section">
-                    <img src="profile_photo.jpg" alt="Wesa Mwiti" class="profile-photo">
-                    <div class="social-links">
-                        <a href="https://github.com/MwitiWesa-coke" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://linkedin.com/in/emmanuelwesa" target="_blank"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://x.com/wesa_smith" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://instagram.com/its_co.ke" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
+      <!-- HEADER SECTION -->
+      <div class="header">
+        <div class="name-photo-section">
+          <div class="name-section">
+            <h1 class="gradient-text">Wesa Mwiti</h1>
+            <p id="tagline"><span id="tagline-text"></span></p>
+          </div>
+          <div class="photo-section">
+            <img
+              src="profile_photo.jpg"
+              alt="Wesa Mwiti"
+              class="profile-photo"
+            />
+            <div class="social-links">
+              <a href="https://github.com/MwitiWesa-coke" target="_blank"
+                ><i class="fab fa-github"></i
+              ></a>
+              <a href="https://linkedin.com/in/emmanuelwesa" target="_blank"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+              <a href="https://x.com/wesa_smith" target="_blank"
+                ><i class="fab fa-x-twitter"></i
+              ></a>
+              <a href="https://instagram.com/its_co.ke" target="_blank"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- BIO SECTION -->
-        <div class="bio-section">
-            <h2>About Me</h2>
-            <p><span id="about-me-text"></span></p>
+      <!-- BIO SECTION -->
+      <div class="bio-section">
+        <h2>About Me</h2>
+        <p><span id="about-me-text"></span></p>
+      </div>
+
+      <!-- BUTTONS -->
+      <div class="buttons">
+        <button onclick="showResume()">Resume</button>
+        <button onclick="showContact()">Contact</button>
+      </div>
+
+      <!-- PROJECTS SECTION -->
+      <div class="projects">
+        <h2>My Projects</h2>
+        <div class="project-card">
+          <h3>B-safe</h3>
+          <p>
+            Femicide Reporting App empowering users to report and map abuse
+            cases in Kenya.
+          </p>
+          <a href="#" target="_blank">View Project</a>
         </div>
-
-        <!-- BUTTONS -->
-        <div class="buttons">
-            <button onclick="showResume()">Resume</button>
-            <button onclick="showContact()">Contact</button>
+        <div class="project-card">
+          <h3>Jabali</h3>
+          <p>
+            Offline AI Desktop Assistant with sarcastic personality, face
+            recognition, voice commands, and task management.
+          </p>
+          <a href="#" target="_blank">View Project</a>
         </div>
-
-        <!-- PROJECTS SECTION -->
-        <div class="projects">
-            <h2>My Projects</h2>
-            <div class="project-card">
-                <h3>B-safe</h3>
-                <p>Femicide Reporting App empowering users to report and map abuse cases in Kenya.</p>
-                <a href="#" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Jabali</h3>
-                <p>Offline AI Desktop Assistant with sarcastic personality, face recognition, voice commands, and task management.</p>
-                <a href="#" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>PointaFam</h3>
-                <p>Platform to help families stay connected and manage family activities.</p>
-                <a href="#" target="_blank">View Project</a>
-            </div>
+        <div class="project-card">
+          <h3>PointaFam</h3>
+          <p>
+            Platform to help families stay connected and manage family
+            activities.
+          </p>
+          <a href="#" target="_blank">View Project</a>
         </div>
+      </div>
 
-        <!-- SKILLS SECTION -->
-        <div class="skills-section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">Python</div>
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">SQL</div>
-                <div class="skill-card">MongoDB</div>
-                <div class="skill-card">HTML / CSS</div>
-                <div class="skill-card">C Language</div>
-                <div class="skill-card">UX Research</div>
-                <div class="skill-card">Project Management</div>
-            </div>
+      <!-- SKILLS SECTION -->
+      <div class="skills-section">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">Python</div>
+          <div class="skill-card">Node.js</div>
+          <div class="skill-card">JavaScript</div>
+          <div class="skill-card">SQL</div>
+          <div class="skill-card">MongoDB</div>
+          <div class="skill-card">HTML / CSS</div>
+          <div class="skill-card">C Language</div>
+          <div class="skill-card">UX Research</div>
+          <div class="skill-card">Project Management</div>
         </div>
+      </div>
 
-        <!-- BLOGS SECTION -->
-        <div class="blogs">
-            <h2>Favorite Blogs</h2>
-            <div class="blog-card">
-                <a href="https://blog.example1.com" target="_blank">Example Blog 1</a>
-            </div>
-            <div class="blog-card">
-                <a href="https://blog.example2.com" target="_blank">Example Blog 2</a>
-            </div>
-            <div class="blog-card">
-                <a href="https://blog.example3.com" target="_blank">Example Blog 3</a>
-            </div>
+      <!-- Book SECTION -->
+      <div class="blogs">
+        <h2>Book Recomendation</h2>
+        <div class="blog-card">
+            <a href="https://blog.example1.com" target="_blank"
+            <strong>The 48 Laws of Power</strong> - Robert Greene
+            <p>
+                Power is never given; it's earned through strategy, perception, and discipline. Greene reveals how influence operates in everyday life, teaching readers to master emotion, timing, and the subtle art of persuasion. The book encourages awareness of hidden motives, showing that understanding power dynamics is key to both leadership and survival.
+            </p>
+        </a>
+    </div>
+        <div class="blog-card">
+            <a href="https://blog.example2.com" target="_blank">
+                <strong>Leaders Eat Last</strong> - Simon Sinek
+                <p>
+                    True leadership is'nt about authority but about service. Sinek explores how the best leaders create environments of trust and safety where people feel valued and inspired to perform their best. Drawing lessons from the military and business world alike, he shows that empathy and selflessness form the foundation of enduring success.
+                </p>
+            </a>
+
         </div>
-
-        <!-- CERTIFICATES SECTION -->
-        <div id="certificates-section" class="certificates show">
-            <h2>Certificates</h2>
-            <div class="certificate-gallery">
-                <img src="50-founder-academy-certificate-emmanuel-wesa.png" alt="Founder Academy Certificate">
-                <img src="89-professional-foundations-certificate-emmanuel-mwiti.png" alt="Professional Foundations Certificate">
-            </div>
+        <div class="blog-card">
+            <a href="https://blog.example3.com" target="_blank">
+                <strong>The Laws of Human Nature</strong> - Robert Greene
+                <p>
+                    Understanding people is the highest form of intelligence. Greene dissects human behavior—our
+                    emotions, drives, and insecurities—revealing how awareness can help us navigate complex social      realities. The book challenges readers to master self-control, read others deeply, and act
+                    with clarity instead of impulse.
+                </p>
+            </a>
         </div>
+      </div>
 
+      <!-- CERTIFICATES SECTION -->
+      <div id="certificates-section" class="certificates show">
+        <h2>Certificates</h2>
+        <div class="certificate-gallery">
+          <img
+            src="70-back-end-web-development-certificate-emmanuel-mwiti.png"
+            alt="Backend"
+          />
+          <img
+            src="50-founder-academy-certificate-emmanuel-wesa.png"
+            alt="Founder Academy Certificate"
+          />
+          <img
+            src="89-professional-foundations-certificate-emmanuel-mwiti.png"
+            alt="Professional Foundations Certificate"
+          />
+          <img
+            src="python_basic certificate (1)Wesa_page-0001.jpg"
+            alt="HackerRank python_basic"
+          />
+          <img
+            src="problem_solving_basic certificate (1)_page-0001.jpg"
+            alt="HackerRank Problem solving"
+          />
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
