@@ -27,19 +27,25 @@ function typeTagline() {
   }
 }
 
-const aboutMeText =
-  'Software Engineer with a strong foundation in backend development and cybersecurity, blending technical expertise with a background in Fisheries and Aquatic Science. Experienced in building impactful APIs, AI-driven tools, and business solutions that support startups and community growth. Founder of SEAW Industries and Blue Touch, focused on applying technology to solve real-world sustainability challenges.';
+const aboutMeText = 
+  'I am a software engineer with a strong foundation in backend and web-development. With a passion for solving challenges and learning why and how they came to be and how to solve them.<br>I have acquired skills in different fields — software engineering, fisheries management, leadership, entrepreneurial — and currently learning cyber security as I sharpen my backend skills. My aim is to put my skills to use and that they may be of help and benefit to others and me.'; 
 let aboutMeIndex = 0;
 
 function typeAboutMe() {
-  if (aboutMeIndex < aboutMeText.length) {
-    document.getElementById('about-me-text').innerHTML +=
-      aboutMeText.charAt(aboutMeIndex);
+  const aboutMeElement = document.getElementById('about-me-text');
+
+  if (aboutMeText.substring(aboutMeIndex, aboutMeIndex + 4) === '<br>') { 
+    aboutMeElement.innerHTML += '<br>'; 
+    aboutMeIndex += 4; 
+  } else if (aboutMeIndex < aboutMeText.length) {
+    aboutMeElement.innerHTML += aboutMeText.charAt(aboutMeIndex);
     aboutMeIndex++;
+  }
+
+  if (aboutMeIndex < aboutMeText.length) {
     setTimeout(typeAboutMe, 40);
   }
 }
-
 window.onload = function () {
   typeTagline();
 };
