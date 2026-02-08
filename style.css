@@ -264,11 +264,73 @@ h2::after {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.4);
     transition: transform 0.3s ease;
+    cursor: pointer;
 }
 .certificate-gallery img:hover {
     transform: scale(1.05);
 }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.85); /* Slightly darker for better contrast */
+    padding: 20px; /* NEW: Breathing room around edges */
+    box-sizing: border-box;
+}
 
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 90vw;          /* NEW: Never wider than 90% of viewport */
+    max-height: 85vh;         /* NEW: Cap height so it doesn't fill screen vertically */
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 172, 238, 0.5);
+    object-fit: contain;      /* NEW: Scales image proportionally without stretching */
+    cursor: default;
+}
+
+#modal-caption {
+    margin: 15px auto 0;
+    display: block;
+    width: 90vw;
+    max-width: 700px;
+    text-align: center;
+    color: #ddd;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 45px;
+    font-weight: bold;
+    cursor: pointer;
+    text-shadow: 0 0 5px rgba(0,0,0,0.8);
+    transition: color 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #00acee;
+}
+
+/* NEW: Make sure image is scrollable if taller than max-height */
+.modal-content-wrapper {     /* Optional wrapper if needed, but not required here */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+}
 /* 📱 Responsive */
 @media (max-width: 768px) {
     .content { padding: 20px 10px; text-align: center; }

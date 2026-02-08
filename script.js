@@ -4,7 +4,7 @@ function showCertificates() {
 }
 
 function showResume() {
-  window.open('Resume-Wesa.pdf', '_blank');
+  window.open('ResumeWesa.pdf', '_blank');
 }
 
 function showContact() {
@@ -13,7 +13,7 @@ function showContact() {
 
 // Typing animation for tagline and about me (as before)
 const taglineText =
-  'Software Engineer  | Entrepreneur | Fisheries Specialist | Cyber security student';
+  'Cyber Security(defence) | Software Engineer(Backend) | Entrepreneur | Fisheries Specialist';
 let taglineIndex = 0;
 
 function typeTagline() {
@@ -28,7 +28,7 @@ function typeTagline() {
 }
 
 const aboutMeText = 
-  'I am a software engineer with a strong foundation in backend and web-development. With a passion for solving challenges and learning why and how they came to be and how to solve them.<br>I have acquired skills in different fields — software engineering, fisheries management, leadership, entrepreneurial — and currently learning cyber security as I sharpen my backend skills. My aim is to put my skills to use and that they may be of help and benefit to others and me.'; 
+  'Backend Software Engineer passionate about problem-solving and secure, resilient systems. With skills in web/APIs development, leadership, and entrepreneurship—and currently building cybersecurity defense expertise (secure coding, threat mitigation, network basics)—I aim to deliver value through protected tech solutions that help others and drive impact.'; 
 let aboutMeIndex = 0;
 
 function typeAboutMe() {
@@ -49,3 +49,29 @@ function typeAboutMe() {
 window.onload = function () {
   typeTagline();
 };
+
+function openModal(imgSrc, captionText) {
+  const modal = document.getElementById('cert-modal');
+  const modalImg = document.getElementById('modal-img');
+  const caption = document.getElementById('modal-caption');
+
+  modal.style.display = 'flex';
+  modalImg.src = imgSrc;
+  modalImg.onload = () => {
+    caption.innerHTML = captionText
+  }
+  caption.innerHTML = captionText;
+
+}
+
+function closeModal() {
+  document.getElementById('cert-modal').style.display = 'none';
+}
+
+//close modal if clicking outside image
+window.onclick = function(event) {
+  const modal = this.document.getElementById('cert-modal');
+  if (event.target == modal) {
+    closeModal();
+  }
+}

@@ -77,6 +77,13 @@
           <a href="#" target="_blank">View Project</a>
         </div>
         <div class="project-card">
+          <h3>TicketX</h3>
+          <p>
+            Event ticketing platform enabling users to browse, select, and purchase tickets for desired events. Tracks purchased tickets and attendance history.
+          </p>
+          <a href="#" target="_blank">View Project</a>
+        </div>
+        <div class="project-card">
           <h3>PointaFam</h3>
           <p>
             Platform to help families stay connected and manage family
@@ -88,7 +95,7 @@
 
       <!-- SKILLS SECTION -->
       <div class="skills-section">
-        <h2>Skills</h2>
+        <h2>Software Engineering Skills</h2>
         <div class="skills-grid">
           <div class="skill-card">Python</div>
           <div class="skill-card">Node.js</div>
@@ -102,6 +109,19 @@
         </div>
       </div>
 
+      <div class="skills-section">
+        <h2>Cybersecurity Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">Wireshark</div>
+          <div class="skill-card">Nmap</div>
+          <div class="skill-card">Burp Suite</div>
+          <div class="skill-card">OWASP ZAP</div>
+          <div class="skill-card">Snyk</div>
+          <div class="skill-card">Nikto</div>
+          <div class="skill-card">SonarQube</div>
+          <div class="skill-card">Metasploit Basics</div>
+        </div>
+      </div>
       <!-- Book SECTION -->
       <div class="blogs">
         <h2>Book Recomendation</h2>
@@ -141,24 +161,40 @@
           <img
             src="70-back-end-web-development-certificate-emmanuel-mwiti.png"
             alt="Backend"
+            onclick="openModal(this.src, 'Backend Web Developmet Certificate - ALX Africa')"
           />
           <img
             src="50-founder-academy-certificate-emmanuel-wesa.png"
             alt="Founder Academy Certificate"
+            onclick="openModal(this.src, 'Founder Academy Certificate - ALX Africa')"
+          />
+          <img
+            src="159-cybersecurity-certificate-wesa-mwiti.png"
+            alt="CyberSecurity Certificate"
+            onclick="openModal(this.src, 'CyberSecurity Certificate - ALX Africa')"
           />
           <img
             src="89-professional-foundations-certificate-emmanuel-mwiti.png"
             alt="Professional Foundations Certificate"
+            onclick="openModal(this.src, 'Professional Foundation Certificate - ALX Africa')"
           />
           <img
             src="python_basic certificate (1)Wesa_page-0001.jpg"
             alt="HackerRank python_basic"
+            onclick="openModal(this.src, 'Python Certificate - HackerRank')"
           />
           <img
             src="problem_solving_basic certificate (1)_page-0001.jpg"
             alt="HackerRank Problem solving"
+            onclick="openModal(this.src, 'problem_solving_basic certificate - HackerRank')"
           />
         </div>
+      </div>
+
+      <div id="cert-modal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-contet" id="modal-img" src="" alt="Certificate">
+        <dic id="modal-caption"></dic>"
       </div>
     </div>
 
